@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.AveragedNDependenceEstimators.A1DE -F 1 -M 1.0
+Relation:     Unprocessed
+Instances:    299
+Attributes:   13
+              Requirements
+              project Category 
+              Requirement Category
+              Risk Target Category
+              Probability
+              Magnitude of Risk
+              Impact
+              Dimension of Risk
+              Afftecting No of Modules
+              Fixing Duration (Days)
+              Fix Cost (% of Project)
+              Priority
+              Risk Level
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+The A1DE Classifier
+
+Class 1: Prior probability = 0.1 
+Class 2: Prior probability = 0.45
+Class 3: Prior probability = 0.25
+Class 4: Prior probability = 0.15
+Class 5: Prior probability = 0.06
+
+Dataset: Unprocessed-weka.filters.supervised.attribute.Discretize-Rfirst-last-precision6
+Instances: 299
+Attributes: 13
+Frequency limit for superParents: (F = 1) 
+Correction: m-estimate (m = 1.0)
+Incremental Classifier Flag: (false)
+Subsumption Resolution Flag: (false)
+Critical Value for Subsumption Resolution (100)
+Weighted AODE Flag: (false)
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         271               90.6355 %
+Incorrectly Classified Instances        28                9.3645 %
+Kappa statistic                          0.8671
+Mean absolute error                      0.0478
+Root mean squared error                  0.169 
+Relative absolute error                 17.0454 %
+Root relative squared error             45.1811 %
+Total Number of Instances              299     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.929    0.007    0.929      0.929    0.929      0.921    0.998     0.985     1
+                 0.926    0.037    0.954      0.926    0.940      0.892    0.989     0.989     2
+                 0.880    0.040    0.880      0.880    0.880      0.840    0.978     0.946     3
+                 0.867    0.020    0.886      0.867    0.876      0.855    0.959     0.875     4
+                 0.938    0.021    0.714      0.938    0.811      0.807    0.994     0.822     5
+Weighted Avg.    0.906    0.031    0.910      0.906    0.907      0.872    0.983     0.952     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+  26   1   1   0   0 |   a = 1
+   2 125   5   2   1 |   b = 2
+   0   4  66   2   3 |   c = 3
+   0   1   3  39   2 |   d = 4
+   0   0   0   1  15 |   e = 5
+

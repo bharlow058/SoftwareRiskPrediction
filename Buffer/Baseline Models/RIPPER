@@ -1,0 +1,68 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     Unprocessed
+Instances:    299
+Attributes:   13
+              Requirements
+              project Category 
+              Requirement Category
+              Risk Target Category
+              Probability
+              Magnitude of Risk
+              Impact
+              Dimension of Risk
+              Afftecting No of Modules
+              Fixing Duration (Days)
+              Fix Cost (% of Project)
+              Priority
+              Risk Level
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(Priority >= 80.307692) => Risk Level=5 (17.0/1.0)
+(Priority <= 19.523077) => Risk Level=1 (28.0/0.0)
+(Priority >= 60.353846) => Risk Level=4 (45.0/1.0)
+(Priority >= 40.192308) => Risk Level=3 (75.0/1.0)
+ => Risk Level=2 (134.0/0.0)
+
+Number of Rules : 5
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         291               97.3244 %
+Incorrectly Classified Instances         8                2.6756 %
+Kappa statistic                          0.9616
+Mean absolute error                      0.0147
+Root mean squared error                  0.1045
+Relative absolute error                  5.241  %
+Root relative squared error             27.9443 %
+Total Number of Instances              299     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.929    0.000    1.000      0.929    0.963      0.960    0.964     0.935     1
+                 0.993    0.018    0.978      0.993    0.985      0.973    0.986     0.974     2
+                 0.973    0.009    0.973      0.973    0.973      0.964    0.980     0.949     3
+                 0.956    0.008    0.956      0.956    0.956      0.948    0.971     0.900     4
+                 0.938    0.004    0.938      0.938    0.938      0.934    0.966     0.829     5
+Weighted Avg.    0.973    0.012    0.973      0.973    0.973      0.964    0.979     0.945     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+  26   2   0   0   0 |   a = 1
+   0 134   1   0   0 |   b = 2
+   0   1  73   1   0 |   c = 3
+   0   0   1  43   1 |   d = 4
+   0   0   0   1  15 |   e = 5
+
