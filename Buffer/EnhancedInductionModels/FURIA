@@ -1,0 +1,68 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.FURIA -F 3 -N 2.0 -O 2 -S 1 -p 0 -s 0
+Relation:     Unprocessed
+Instances:    299
+Attributes:   13
+              Requirements
+              project Category 
+              Requirement Category
+              Risk Target Category
+              Probability
+              Magnitude of Risk
+              Impact
+              Dimension of Risk
+              Afftecting No of Modules
+              Fixing Duration (Days)
+              Fix Cost (% of Project)
+              Priority
+              Risk Level
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+FURIA rules:
+===========
+
+(Priority in [-inf, -inf, 19.523077, 20.207692]) => Risk Level=1 (CF = 0.94)
+(Priority in [-inf, -inf, 39.592308, 40.192308]) and (Priority in [19.523077, 20.207692, inf, inf]) => Risk Level=2 (CF = 0.99)
+(Priority in [39.592308, 40.192308, inf, inf]) and (Priority in [-inf, -inf, 59.169231, 60.353846]) => Risk Level=3 (CF = 0.97)
+(Priority in [59.169231, 60.353846, inf, inf]) and (Priority in [-inf, -inf, 81.130769, 81.484615]) => Risk Level=4 (CF = 0.92)
+(Priority in [78.376923, 80.307692, inf, inf]) => Risk Level=5 (CF = 0.85)
+
+Number of Rules : 5
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         293               97.9933 %
+Incorrectly Classified Instances         6                2.0067 %
+Kappa statistic                          0.9713
+Mean absolute error                      0.009 
+Root mean squared error                  0.0811
+Relative absolute error                  3.203  %
+Root relative squared error             21.6915 %
+Total Number of Instances              299     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+                 0.993    0.000    1.000      0.993    0.996      0.993    0.996     0.996     2
+                 0.987    0.013    0.961      0.987    0.974      0.965    0.991     0.977     3
+                 0.933    0.008    0.955      0.933    0.944      0.934    0.985     0.935     4
+                 0.938    0.004    0.938      0.938    0.938      0.934    0.967     0.879     5
+Weighted Avg.    0.980    0.005    0.980      0.980    0.980      0.975    0.992     0.976     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+  28   0   0   0   0 |   a = 1
+   0 134   1   0   0 |   b = 2
+   0   0  74   1   0 |   c = 3
+   0   0   2  42   1 |   d = 4
+   0   0   0   1  15 |   e = 5
+

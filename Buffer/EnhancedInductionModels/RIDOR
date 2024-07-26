@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.Ridor -F 3 -S 1 -N 2.0
+Relation:     Unprocessed
+Instances:    299
+Attributes:   13
+              Requirements
+              project Category 
+              Requirement Category
+              Risk Target Category
+              Probability
+              Magnitude of Risk
+              Impact
+              Dimension of Risk
+              Afftecting No of Modules
+              Fixing Duration (Days)
+              Fix Cost (% of Project)
+              Priority
+              Risk Level
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RIpple DOwn Rule Learner(Ridor) rules
+--------------------------------------
+
+Risk Level = 1  (299.0/271.0)
+           Except (Priority > 19.865385) => Risk Level = 4  (181.0/0.0) [90.0/0.0]
+                    Except (Priority <= 59.761539) => Risk Level = 3  (136.0/0.0) [73.0/0.0]
+                             Except (Priority <= 39.976923) => Risk Level = 2  (90.0/0.0) [44.0/0.0]
+                    Except (Priority > 81.307692) => Risk Level = 5  (12.0/0.0) [3.0/0.0]
+
+Total number of rules (incl. the default rule): 5
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         294               98.3278 %
+Incorrectly Classified Instances         5                1.6722 %
+Kappa statistic                          0.9761
+Mean absolute error                      0.0067
+Root mean squared error                  0.0818
+Relative absolute error                  2.3858 %
+Root relative squared error             21.8695 %
+Total Number of Instances              299     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     1
+                 0.993    0.000    1.000      0.993    0.996      0.993    0.996     0.996     2
+                 0.987    0.009    0.974      0.987    0.980      0.973    0.989     0.964     3
+                 0.956    0.008    0.956      0.956    0.956      0.948    0.974     0.920     4
+                 0.938    0.004    0.938      0.938    0.938      0.934    0.967     0.882     5
+Weighted Avg.    0.983    0.004    0.983      0.983    0.983      0.979    0.990     0.971     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+  28   0   0   0   0 |   a = 1
+   0 134   1   0   0 |   b = 2
+   0   0  74   1   0 |   c = 3
+   0   0   1  43   1 |   d = 4
+   0   0   0   1  15 |   e = 5
+
